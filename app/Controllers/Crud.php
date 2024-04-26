@@ -2,14 +2,37 @@
 
 namespace App\Controllers;
 
+use App\Models\CrudModel;
+
 class Crud extends BaseController
 {
-    public function index(): string
+    public function index()
     {
-        return view('registro');
+        $mensaje = session('mensaje');
+        $data = [
+            "mensaje" => $mensaje
+        ];
+         return view('registro',$data);
     }
 
     public function crear(){
+        $datos = [
+            "nombre" => $_POST['nombre'],
+            "apellido" => $_POST['apellido'],
+            "rfc" => $_POST['rfc'],
+            "email" => $_POST['email'],
+            "telefono" => $_POST['telefono']
+        ];
+
+        $Crud = new CrudModel();
+        $respuesta = $Crud->insertar($datos);
+
+        if($respuesta > 0){
+            return redirect()->to(base_url().'/')->with('mensaje','1');
+        }else{
+            return redirect()->to(base_url().'/')->with('mensaje','0');
+        }
+
 
     }
 
@@ -17,11 +40,22 @@ class Crud extends BaseController
 
     }
 
-    public function consultar(){
+    public function consulta(){
+        $Crud = new CrudModel();
+        $datos = $Crud->listar();
+
+        $data = [
+            "datos" => $datos
+        ];
+        return view('consulta',$data);
 
     }
 
-    public function obtenerNombre(){
-        
+    public function obtenerNombre($idNombre){
+
+    }
+
+    public function eliminar($idNombre){
+
     }
 }

@@ -1,0 +1,244 @@
+ERROR - 2024-04-26 08:06:00 --> Error connecting to the database: mysqli_sql_exception: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\xampp\htdocs\CRUDdigiosoft\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\xampp\htdocs\CRUDdigiosoft\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'CRUDdigiosoft', 3307, '', 0)
+#1 C:\xampp\htdocs\CRUDdigiosoft\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\CRUDdigiosoft\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\CRUDdigiosoft\system\Database\BaseConnection.php(1471): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\xampp\htdocs\CRUDdigiosoft\system\Database\BaseConnection.php(1490): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\CRUDdigiosoft\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\xampp\htdocs\CRUDdigiosoft\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\xampp\htdocs\CRUDdigiosoft\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\CRUDdigiosoft\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\CRUDdigiosoft\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\CRUDdigiosoft\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\CRUDdigiosoft\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\CRUDdigiosoft\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: The server requested authentication method unknown to the client [auth_gssapi_client] in C:\xampp\htdocs\CRUDdigiosoft\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\CRUDdigiosoft\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\CRUDdigiosoft\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\CRUDdigiosoft\system\Database\BaseConnection.php(1471): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\xampp\htdocs\CRUDdigiosoft\system\Database\BaseConnection.php(1490): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\CRUDdigiosoft\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\xampp\htdocs\CRUDdigiosoft\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\xampp\htdocs\CRUDdigiosoft\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\xampp\htdocs\CRUDdigiosoft\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\xampp\htdocs\CRUDdigiosoft\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\xampp\htdocs\CRUDdigiosoft\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#10 C:\xampp\htdocs\CRUDdigiosoft\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 C:\xampp\htdocs\CRUDdigiosoft\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-04-26 08:09:33 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'cruddigiosoft' in C:\xampp\htdocs\CRUDdigiosoft\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\xampp\htdocs\CRUDdigiosoft\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', 'password', 'CRUDdigiosoft', 3307, '', 0)
+#1 C:\xampp\htdocs\CRUDdigiosoft\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\CRUDdigiosoft\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\CRUDdigiosoft\system\Database\BaseConnection.php(1471): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\xampp\htdocs\CRUDdigiosoft\system\Database\BaseConnection.php(1490): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\CRUDdigiosoft\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\xampp\htdocs\CRUDdigiosoft\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\xampp\htdocs\CRUDdigiosoft\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\CRUDdigiosoft\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\CRUDdigiosoft\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\CRUDdigiosoft\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\CRUDdigiosoft\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\CRUDdigiosoft\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'cruddigiosoft' in C:\xampp\htdocs\CRUDdigiosoft\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\CRUDdigiosoft\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\CRUDdigiosoft\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\CRUDdigiosoft\system\Database\BaseConnection.php(1471): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\xampp\htdocs\CRUDdigiosoft\system\Database\BaseConnection.php(1490): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\CRUDdigiosoft\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\xampp\htdocs\CRUDdigiosoft\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\xampp\htdocs\CRUDdigiosoft\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\xampp\htdocs\CRUDdigiosoft\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\xampp\htdocs\CRUDdigiosoft\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\xampp\htdocs\CRUDdigiosoft\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#10 C:\xampp\htdocs\CRUDdigiosoft\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 C:\xampp\htdocs\CRUDdigiosoft\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-04-26 08:25:31 --> ErrorException: Undefined variable $datos
+[Method: GET, Route: /]
+in APPPATH\Views\registro.php on line 20.
+ 1 APPPATH\Views\registro.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\xampp\\htdocs\\CRUDdigiosoft\\app\\Views\\registro.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\CRUDdigiosoft\\app\\Views\\registro.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro', [], true)
+ 5 APPPATH\Controllers\Crud.php(11): view('registro')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-26 08:25:50 --> ErrorException: Undefined variable $datos
+[Method: GET, Route: /]
+in APPPATH\Views\registro.php on line 20.
+ 1 APPPATH\Views\registro.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\xampp\\htdocs\\CRUDdigiosoft\\app\\Views\\registro.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\CRUDdigiosoft\\app\\Views\\registro.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro', [], true)
+ 5 APPPATH\Controllers\Crud.php(11): view('registro')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-26 08:25:51 --> ErrorException: Undefined variable $datos
+[Method: GET, Route: /]
+in APPPATH\Views\registro.php on line 20.
+ 1 APPPATH\Views\registro.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\xampp\\htdocs\\CRUDdigiosoft\\app\\Views\\registro.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\CRUDdigiosoft\\app\\Views\\registro.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro', [], true)
+ 5 APPPATH\Controllers\Crud.php(11): view('registro')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-26 08:26:57 --> ErrorException: Undefined variable $datos
+[Method: GET, Route: /]
+in APPPATH\Views\registro.php on line 20.
+ 1 APPPATH\Views\registro.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\xampp\\htdocs\\CRUDdigiosoft\\app\\Views\\registro.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\CRUDdigiosoft\\app\\Views\\registro.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro', [], true)
+ 5 APPPATH\Controllers\Crud.php(11): view('registro')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-26 08:26:58 --> ErrorException: Undefined variable $datos
+[Method: GET, Route: /]
+in APPPATH\Views\registro.php on line 20.
+ 1 APPPATH\Views\registro.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\xampp\\htdocs\\CRUDdigiosoft\\app\\Views\\registro.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\CRUDdigiosoft\\app\\Views\\registro.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro', [], true)
+ 5 APPPATH\Controllers\Crud.php(11): view('registro')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-26 08:26:59 --> ErrorException: Undefined variable $datos
+[Method: GET, Route: /]
+in APPPATH\Views\registro.php on line 20.
+ 1 APPPATH\Views\registro.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\xampp\\htdocs\\CRUDdigiosoft\\app\\Views\\registro.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\CRUDdigiosoft\\app\\Views\\registro.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro', [], true)
+ 5 APPPATH\Controllers\Crud.php(11): view('registro')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-26 08:27:57 --> Error: Class "App\Models\CrudModel" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Crud.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-26 08:28:32 --> Error: Class "App\Models\CrudModel" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Crud.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-26 08:28:34 --> Error: Class "App\Models\CrudModel" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Crud.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-26 08:29:00 --> Error: Class "App\Models\CrudModel" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Crud.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-26 08:29:26 --> Error: Class "App\Models\CrudModel" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Crud.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-26 08:30:34 --> Error: Class "App\Models\CrudModel" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Crud.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-26 08:32:50 --> ErrorException: Undefined variable $datos
+[Method: GET, Route: /]
+in APPPATH\Views\registro.php on line 20.
+ 1 APPPATH\Views\registro.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\xampp\\htdocs\\CRUDdigiosoft\\app\\Views\\registro.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\CRUDdigiosoft\\app\\Views\\registro.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro', [], true)
+ 5 APPPATH\Controllers\Crud.php(11): view('registro')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-26 08:32:51 --> ErrorException: Undefined variable $datos
+[Method: GET, Route: /]
+in APPPATH\Views\registro.php on line 20.
+ 1 APPPATH\Views\registro.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'C:\\xampp\\htdocs\\CRUDdigiosoft\\app\\Views\\registro.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\CRUDdigiosoft\\app\\Views\\registro.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('registro', [], true)
+ 5 APPPATH\Controllers\Crud.php(11): view('registro')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-04-26 08:49:57 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "$key->idNombre"
+[Method: GET, Route: obtenerNombre/$key-%3EidNombre]
+in SYSTEMPATH\Router\Router.php on line 736.
+ 1 SYSTEMPATH\Router\Router.php(203): CodeIgniter\Router\Router->checkDisallowedChars('obtenerNombre/$key->idNombre')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('obtenerNombre/$key->idNombre')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-04-26 09:04:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-26 09:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-26 09:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-26 09:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

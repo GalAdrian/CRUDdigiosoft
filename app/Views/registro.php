@@ -20,8 +20,8 @@
                 <form action="<?php echo base_url() . '/crear' ?>" method="post">
                     <label for="nombre">Nombre(s)</label>
                     <input class="form-control" type="text" name="nombre" id="nombre">
-                    <label for="apellidos">Apellido(s)</label>
-                    <input class="form-control" type="text" name="apellidos" id="apellidos">
+                    <label for="apellido">Apellido(s)</label>
+                    <input class="form-control" type="text" name="apellido" id="apellido">
                     <label for="rfc">RFC</label>
                     <input class="form-control" type="text" name="rfc" id="rfc">
                     <label for="email">Email</label>
@@ -31,7 +31,7 @@
                     <br>
                     <button class="btn btn-primary">Guardar</button>
                 </form>
-                <form class="mt-3" action="<?php echo base_url().'/consultar'?>">
+                <form class="mt-3" action="<?php echo base_url().'/consulta'?>">
                 <button class="btn btn-success">Ver registros</button>
             </form>
             </div>
@@ -52,6 +52,16 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
     -->
+    <script type="text/javascript">
+        let mensaje = '<?php echo $mensaje?>';
+
+        if(mensaje == '1'){
+            alert('Agregado con exito');
+        }
+        else if(mensaje == '0'){
+            alert('no se agrego')
+        }
+    </script>
 </body>
 
 </html>
