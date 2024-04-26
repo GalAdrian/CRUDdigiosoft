@@ -58,18 +58,24 @@
         if (mensaje == '1') {
             alert('Agregado con exito');
         } else if (mensaje == '0') {
+            window.location.href = '<?php echo base_url().'/consulta' ?>';
             alert('no se agrego')
         }
         else if(mensaje == '2'){
+            window.location.href = '<?php echo base_url().'/consulta' ?>';
             alert('Actualizado con exito')
         }
         else if(mensaje == '3'){
             alert('No se pudo actualizar')
         } else if(mensaje == '4'){
+            window.location.href = '<?php echo base_url().'/consulta' ?>';
             alert('Eliminado con exito')
         }
         else if(mensaje == '5'){
             alert('No se pudo eliminar')
+        }
+        else if(mensaje == '99'){
+            alert('Error: uno o mas campos estan vacios')
         }
     </script>
 </body>
