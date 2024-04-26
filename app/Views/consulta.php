@@ -43,9 +43,9 @@
         </table>
       </div>
     </div>
-    <form class="mx-auto" action="<?php echo base_url().'/' ?>">
-      <button class="btn btn-l btn-success">Regresar</button>
-    </form>
+    
+      <a href="<?php echo base_url().'/'?>" class="mx-auto btn btn-l btn-success">Regresar</a>
+    
   </div>
 
 
