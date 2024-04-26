@@ -49,21 +49,34 @@ class Crud extends BaseController
 
     public function actualizar()
     {
-        $datos = [
-            "nombre" => $_POST['nombre'],
-            "apellido" => $_POST['apellidos'],
-            "rfc" => $_POST['rfc'],
-            "email" => $_POST['email'],
-            "telefono" => $_POST['telefono']
-        ];
-        $idNombre = $_POST['idNombre'];
-        $Crud = new CrudModel();
-        $res = $Crud->actualizar($datos, $idNombre);
+        // Verificar si los campos necesarios están definidos y no están vacíos
+        if (
+            isset($_POST['nombre'], $_POST['apellidos'], $_POST['rfc'], $_POST['email'], $_POST['telefono']) &&
+            !empty($_POST['nombre']) && !empty($_POST['apellidos']) && !empty($_POST['rfc']) &&
+            !empty($_POST['email']) && !empty($_POST['telefono'])
+        ) {
 
-        if ($res) {
-            return redirect()->to(base_url() . '/')->with('mensaje', '2');
+            // Si todos los campos necesarios tienen valores, proceder con la actualización
+            $datos = [
+                "nombre" => $_POST['nombre'],
+                "apellido" => $_POST['apellidos'],
+                "rfc" => $_POST['rfc'],
+                "email" => $_POST['email'],
+                "telefono" => $_POST['telefono']
+            ];
+
+            $idNombre = $_POST['idNombre'];
+            $Crud = new CrudModel();
+            $res = $Crud->actualizar($datos, $idNombre);
+
+            if ($res) {
+                return redirect()->to(base_url() . '/')->with('mensaje', '2');
+            } else {
+                return redirect()->to(base_url() . '/')->with('mensaje', '3');
+            }
         } else {
-            return redirect()->to(base_url() . '/')->with('mensaje', '3');
+            // Si algún campo está vacío, redirigir de vuelta con un mensaje de error
+            return redirect()->to(base_url() . '/')->with('mensaje', '98');
         }
     }
 

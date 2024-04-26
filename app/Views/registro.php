@@ -77,6 +77,10 @@
         else if(mensaje == '99'){
             alert('Error: uno o mas campos estan vacios')
         }
+        else if(mensaje == '98'){
+            window.location.href = '<?php echo base_url().'/consulta' ?>';
+            alert('No puedes dejar campos vacios')
+        }
     </script>
 </body>
 
