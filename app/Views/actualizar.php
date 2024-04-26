@@ -18,12 +18,12 @@ $telefono = $datos[0]['telefono'];
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    <title>Actualiza un registro</title>
+    <title>Actualizando</title>
 </head>
 
 <body>
     <div class="container">
-        <h1>CRUD con Codeinigter</h1>
+        <h1>Actualiza el registro</h1>
 
         <div class="row">
             <div class="col-sm-8">
@@ -45,8 +45,11 @@ $telefono = $datos[0]['telefono'];
                     <label for="telefono">N&uacute;mero de tel&eacute;fono</label>
                     <input class="form-control" type="tel" name="telefono" id="telefono" value="<?php echo $telefono ?>">
                     <br>
-                    
+                    <div class="row">
                     <button class="btn btn-warning">Guardar</button>
+                    <a class="btn btn-success ml-auto" href="<?php echo base_url() . '/consulta' ?>">Regresar</a>
+                    </div>
+                    
                 </form>
             </div>
         </div>
