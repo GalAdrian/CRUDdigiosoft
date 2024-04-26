@@ -37,7 +37,22 @@ class Crud extends BaseController
     }
 
     public function actualizar(){
+        $datos = [
+            "nombre" => $_POST['nombre'],
+            "apellido" => $_POST['apellidos'],
+            "rfc" => $_POST['rfc'],
+            "email" => $_POST['email'],
+            "telefono" => $_POST['telefono']
+        ];
+        $idNombre = $_POST['idNombre'];
+        $Crud = new CrudModel();
+        $res = $Crud->actualizar($datos,$idNombre);
 
+        if($res){
+            return redirect()->to(base_url().'/')->with('mensaje','2');
+        }else{
+            return redirect()->to(base_url().'/')->with('mensaje','3');
+        }
     }
 
     public function consulta(){
@@ -52,8 +67,16 @@ class Crud extends BaseController
     }
 
     public function obtenerNombre($idNombre){
+        $data = ["idNombre" => $idNombre];
+        $Crud = new CrudModel();
+        $res = $Crud->obtenerNombre($data);
+        $datos = ["datos" => $res];
+
+        return view('actualizar',$datos);
 
     }
+
+
 
     public function eliminar($idNombre){
 

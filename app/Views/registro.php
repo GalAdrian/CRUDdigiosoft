@@ -29,11 +29,11 @@
                     <label for="telefono">N&uacute;mero de tel&eacute;fono</label>
                     <input class="form-control" type="tel" name="telefono" id="telefono">
                     <br>
-                    <button class="btn btn-primary">Guardar</button>
-                </form>
-                <form class="mt-3" action="<?php echo base_url().'/consulta'?>">
-                <button class="btn btn-success">Ver registros</button>
-            </form>
+                    <div class="row ">
+                        <button class="btn btn-primary">Guardar</button>
+                        <a class=" ml-auto btn btn-success" href="<?php echo base_url() . '/consulta' ?>">Ver registros</a>
+                    </div>
+
             </div>
         </div>
     </div>
@@ -53,13 +53,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
     -->
     <script type="text/javascript">
-        let mensaje = '<?php echo $mensaje?>';
+        let mensaje = '<?php echo $mensaje ?>';
 
-        if(mensaje == '1'){
+        if (mensaje == '1') {
             alert('Agregado con exito');
-        }
-        else if(mensaje == '0'){
+        } else if (mensaje == '0') {
             alert('no se agrego')
+        }
+        else if(mensaje == '2'){
+            alert('Actualizado con exito')
+        }
+        else if(mensaje == '3'){
+            alert('No se pudo actualizar')
         }
     </script>
 </body>

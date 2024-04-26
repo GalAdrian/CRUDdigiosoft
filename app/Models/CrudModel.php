@@ -16,5 +16,18 @@
             return $this->db->insertID();
         }
 
+        public function obtenerNombre($data){
+            $Nombres = $this->db->table('t_personas');
+            $Nombres -> where($data);
+            return $Nombres->get()->getResultArray();
+        }
+
+        public function actualizar($data, $idNombre){
+            $Nombres = $this->db->table('t_personas');
+            $Nombres->set($data);
+            $Nombres->where('idNombre',$idNombre);
+            return $Nombres->update();
+        }
+
     }
 ?>

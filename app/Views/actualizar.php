@@ -1,3 +1,12 @@
+<?php
+$idNombre = $datos[0]['idNombre'];
+$nombre = $datos[0]['nombre'];
+$apellido = $datos[0]['apellido'];
+$rfc = $datos[0]['rfc'];
+$email = $datos[0]['email'];
+$telefono = $datos[0]['telefono'];
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -15,21 +24,28 @@
 <body>
     <div class="container">
         <h1>CRUD con Codeinigter</h1>
+
         <div class="row">
             <div class="col-sm-8">
                 <form action="<?php echo base_url() . '/actualizar' ?>" method="post">
-                    <input type="text" name="idNombre" id="idNombre" hidden="">
+                    <input type="text" name="idNombre" id="idNombre" hidden="" value="<?php echo $idNombre ?>">
+
                     <label for="nombre">Nombre(s)</label>
-                    <input class="form-control" type="text" name="nombre" id="nombre">
+                    <input class="form-control" type="text" name="nombre" id="nombre" value="<?php echo $nombre ?>">
+
                     <label for="apellidos">Apellido(s)</label>
-                    <input class="form-control" type="text" name="apellidos" id="apellidos">
+                    <input class="form-control" type="text" name="apellidos" id="apellidos" value="<?php echo $apellido ?>">
+
                     <label for="rfc">RFC</label>
-                    <input class="form-control" type="text" name="rfc" id="rfc">
+                    <input class="form-control" type="text" name="rfc" id="rfc" value="<?php echo $rfc ?>">
+
                     <label for="email">Email</label>
-                    <input class="form-control" type="email" name="email" id="email">
+                    <input class="form-control" type="email" name="email" id="email" value="<?php echo $email ?>">
+
                     <label for="telefono">N&uacute;mero de tel&eacute;fono</label>
-                    <input class="form-control" type="number" name="telefono" id="telefono">
+                    <input class="form-control" type="tel" name="telefono" id="telefono" value="<?php echo $telefono ?>">
                     <br>
+                    
                     <button class="btn btn-warning">Guardar</button>
                 </form>
             </div>
