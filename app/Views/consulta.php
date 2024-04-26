@@ -36,7 +36,7 @@
               <td><?php echo $key->email ?></td>
               <td><?php echo $key->telefono ?></td>
               <td><a href="<?php echo base_url().'/obtenerNombre/'.$key->idNombre ?>" class="btn btn-sm btn-warning">Editar</a></td>
-              <td><a href="" class="btn btn-sm btn-danger">Eliminar</a></td>
+              <td><a href="<?php echo base_url().'/eliminar/'.$key->idNombre?>" class="btn btn-sm btn-danger">Eliminar</a></td>
             </tr>
           <?php endforeach; ?>
 

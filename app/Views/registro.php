@@ -65,6 +65,11 @@
         }
         else if(mensaje == '3'){
             alert('No se pudo actualizar')
+        } else if(mensaje == '4'){
+            alert('Eliminado con exito')
+        }
+        else if(mensaje == '5'){
+            alert('No se pudo eliminar')
         }
     </script>
 </body>
