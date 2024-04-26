@@ -20,7 +20,7 @@
       <div class="table table-responsive">
         <table class="table table-hover table-overed">
           <tr>
-            <th>Nombre(s)</th>
+            <th>Nombre</th>
             <th>Apellido(s)</th>
             <th>RFC</th>
             <th>Email</th>
